@@ -1,30 +1,27 @@
-import styles from './NavBar.module.css';
+import { AppBar, Toolbar, Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-export default function NavBar() {
-    const navigate = useNavigate();
-    const Inicio = () => {
-        navigate('/Inicio');
-    };
+function NavBar() {
+  const navigate = useNavigate();
 
-    const Filmes = () => {
-        navigate('/Filmes');
-    };
-
-    const DetalhesFilmes = () => {
-        navigate('/DetalhesFilmes');
-    };
-
-    const Contato = () => {
-        navigate('/Contato');
-    };
-
-    return (
-        <nav className={styles.navBar}>
-            <button onClick={Inicio}>Inicio</button>
-            <button onClick={Filmes}>Filmes</button>
-            <button onClick={DetalhesFilmes}>DetalhesFilmes</button>
-            <button onClick={Contato}>Contato</button>
-        </nav>
-    );
+  return (
+    <AppBar position="static">
+      <Toolbar>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            width: '100%',
+            gap: 3,
+          }}
+        >
+          <Button color="inherit" onClick={() => navigate('/home')}>Início</Button>
+          <Button color="inherit" onClick={() => navigate('/filmes')}>Filmes</Button>
+          <Button color="inherit" onClick={() => navigate('/contato')}>Contato</Button>
+        </Box>
+      </Toolbar>
+    </AppBar>
+  );
 }
+
+export default NavBar;

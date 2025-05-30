@@ -7,13 +7,18 @@
   
   .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 2em;
     padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin: 2em auto;
+    border-top: rgb(43, 43, 250) solid 2px;
+    border-bottom: rgb(43, 43, 250) solid 2px;
   }
+
+  
   
   .content {
     font-size: 14px;
@@ -22,16 +27,12 @@
   .social {
     display: flex;
     gap: 12px;
-  }
-  
-  .social img {
-    width: 28px;
-    height: 28px;
     cursor: pointer;
-    transition: transform 0.3s ease;
   }
   
-  .social img:hover {
-    transform: scale(1.1);
+  .social a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
   }
   

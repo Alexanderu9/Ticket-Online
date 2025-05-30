@@ -6,3 +6,22 @@ body {
   text-align: center;
 }
 
+.grid-filmes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.filme-card {
+  background: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.filme-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

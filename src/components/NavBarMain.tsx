@@ -1,27 +1,48 @@
-import { AppBar, Toolbar,  Typography, Box, Button } from '@mui/material';
+import { useState } from 'react';
+import { Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, AppBar, Toolbar, Typography } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
-import ThemeToggle from './ThemeToggle';
+import  ThemeToggle  from './ThemeToggle';
 
-function NavBar() {
+const NavBarMain = () => {
+  const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
+  const toggleDrawer = (state: boolean) => () => setOpen(state);
+
+  const menuItems = [
+    { text: 'Início', path: '/' },
+    { text: 'Filmes', path: '/filmes' },
+    { text: 'Contato', path: '/contato' }
+  ];
+
   return (
-    <AppBar position="static">
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <Typography variant="h6" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }}>
-          CinemaApp
-        </Typography>
+    <>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)} aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <ThemeToggle />
+          <Typography variant="h6" sx={{ ml: 2 }}>
+            <h3>🎬 CineApp </h3>
+          </Typography>
+        </Toolbar>
+      </AppBar>
 
-        <Box>
-          <Button color="inherit" onClick={() => navigate('/')}>Início</Button>
-          <Button color="inherit" onClick={() => navigate('/filmes')}>Filmes</Button>
-          <Button color="inherit" onClick={() => navigate('/contato')}>Contato</Button>
-        </Box>
-
-        <ThemeToggle />
-      </Toolbar>
-    </AppBar>
+      <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
+        <List sx={{ width: 250 }}>
+          {menuItems.map((item) => (
+            <ListItem key={item.text} disablePadding>
+              <ListItemButton onClick={() => { navigate(item.path); setOpen(false); }}>
+                <ListItemText primary={item.text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+    </>
   );
-}
+};
 
-export default NavBar;
+export default NavBarMain;

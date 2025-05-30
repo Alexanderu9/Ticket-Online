@@ -1,0 +1,25 @@
+.sun {
+    background-color: yellow;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.shade {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cartas {
+    color: rgb(2, 2, 2);
+    border: #000 5px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}

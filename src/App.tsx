@@ -1,7 +1,13 @@
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import NavBar from './components/NavBar';
+import { Routes, Route } from 'react-router-dom';
+import Filmes from './pages/Filmes';
+import DetalhesFilme from './components/FilmeDetalhes';
+import Home from './pages/Home';
 import NavBarMain from './components/NavBarMain';
+import FilmeGrid from './components/FilmeGrid';
+import FilmeDetalhes from './components/FilmeDetalhes';
+import ContatoForm from './pages/ContatoForm';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 
 
 
@@ -12,15 +18,17 @@ function App() {
   return (
    <>
     <NavBarMain/>
-    <NavBar/>
+    
     <Routes>
-    <Route path="/" element={'<Inicio /'} />
-    <Route path="/filmes" element={'<Filmes />'} />
-    <Route path="/detalhesfilmes" element={'<DetalhesFilmes />'} />
-    <Route path="/contato" element={'<Contato />'} />
-
+    <Route path="/" element={<FilmeGrid />} />
+    <Route path="/filmes/:id" element={<FilmeDetalhes />} />
+    <Route path="/home" element={<Home />} />
+    <Route path="/filmes" element={<Filmes />} />
+    <Route path="/filmes/:id" element={<DetalhesFilme />} />
+    <Route path="/contato" element={<ContatoForm />} />
     </Routes>
-
+    <NavBar/>
+    <Footer/>
     </>
 
 );

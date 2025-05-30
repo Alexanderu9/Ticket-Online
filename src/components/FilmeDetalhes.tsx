@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { filmes } from '../data/filmesMock';
+import style from './Filme.module.css';
 
 const FilmeDetalhes = () => {
   const { id } = useParams();
@@ -9,8 +10,8 @@ const FilmeDetalhes = () => {
   if (!filme) return <p>Filme não encontrado.</p>;
 
   return (
-    <div>
-      <img src={filme.imagem} alt={filme.titulo} />
+    <div className={style.container}>
+      <img src={filme.imagem} alt={filme.titulo} width={500} height={500}/>
       <h1>{filme.titulo}</h1>
       <p><strong>Gênero:</strong> {filme.genero}</p>
       <p><strong>Idade:</strong> {filme.idade}</p>
