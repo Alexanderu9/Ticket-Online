@@ -1,0 +1,37 @@
+.cont.footer {
+    background-color: #2e7d32; 
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .content {
+    font-size: 14px;
+  }
+  
+  .social {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .social img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .social img:hover {
+    transform: scale(1.1);
+  }
+  
