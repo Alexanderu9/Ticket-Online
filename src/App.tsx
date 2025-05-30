@@ -1,19 +1,28 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
+import NavBarMain from './components/NavBarMain';
+
+
 
 
 function App() {
 
 
   return (
-    <BrowserRouter>
-    <NavBar />
+   <>
+    <NavBarMain/>
+    <NavBar/>
     <Routes>
-      <Route/>
+    <Route path="/" element={'<Inicio /'} />
+    <Route path="/filmes" element={'<Filmes />'} />
+    <Route path="/detalhesfilmes" element={'<DetalhesFilmes />'} />
+    <Route path="/contato" element={'<Contato />'} />
 
     </Routes>
-  </BrowserRouter>
+
+    </>
+
 );
 }
 
