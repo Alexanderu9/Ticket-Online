@@ -8,7 +8,7 @@ export default function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/filmes" element={<Filmes />} />
-      <Route path="/contato" element={<ContatoForm />} />
+      <Route path="/ContatoForm" element={<ContatoForm />} />
     </Routes>
   );
 }
