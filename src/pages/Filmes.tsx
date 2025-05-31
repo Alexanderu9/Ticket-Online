@@ -1,5 +1,5 @@
 import FilmeGrid from '../components/FilmeGrid';
-import style from './Home.module.css';
+import style from './home.module.css';
 const Filmes = () => {
   return (
     <div>
