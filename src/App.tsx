@@ -7,7 +7,7 @@ import FilmeGrid from './components/FilmeGrid';
 import FilmeDetalhes from './components/FilmeDetalhes';
 import ContatoForm from './pages/ContatoForm';
 import Footer from './components/Footer';
-import NavBar from './components/NavBar';
+import NavBar from './components/Navbar';
 
 
 
@@ -20,9 +20,10 @@ function App() {
     <NavBarMain/>
     
     <Routes>
-    <Route path="/" element={<FilmeGrid />} />
+    <Route path="/" element={<Home />} />
+    <Route path="/FilmeGrid" element={<FilmeGrid />} />
+    <Route path='/home' element={<Home/>}/>
     <Route path="/filmes/:id" element={<FilmeDetalhes />} />
-    <Route path="/home" element={<Home />} />
     <Route path="/filmes" element={<Filmes />} />
     <Route path="/filmes/:id" element={<DetalhesFilme />} />
     <Route path="/contato" element={<ContatoForm />} />

@@ -11,7 +11,7 @@ const NavBarMain = () => {
   const toggleDrawer = (state: boolean) => () => setOpen(state);
 
   const menuItems = [
-    { text: 'Início', path: '/' },
+    { text: 'Início', path: '/home' },
     { text: 'Filmes', path: '/filmes' },
     { text: 'Contato', path: '/contato' }
   ];
@@ -25,7 +25,7 @@ const NavBarMain = () => {
           </IconButton>
           <ThemeToggle />
           <Typography variant="h6" sx={{ ml: 2 }}>
-            <h3>🎬 CineApp </h3>
+            <h3>🎬 Ticket Online </h3>
           </Typography>
         </Toolbar>
       </AppBar>

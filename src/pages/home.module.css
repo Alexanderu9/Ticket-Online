@@ -1,9 +1,21 @@
+.container {
+    background-image: src("/cinema.jpg");
+
+}
+
 .container img {
-    width: 50%;
+    width: 65%;
     height: auto;
     align-items: center;
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: block;
+    border-radius: 40px;
+}
+
+.filmes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
