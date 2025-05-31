@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { filmes } from '../data/filmesMock';
-import style from './Filme.module.css';
+import style from './filme.module.css';
 
 const FilmeDetalhes = () => {
   const { id } = useParams();
