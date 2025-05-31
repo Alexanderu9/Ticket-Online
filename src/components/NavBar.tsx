@@ -17,7 +17,7 @@ function NavBar() {
         >
           <Button color="inherit" onClick={() => navigate('/home')}>Início</Button>
           <Button color="inherit" onClick={() => navigate('/filmes')}>Filmes</Button>
-          <Button color="inherit" onClick={() => navigate('/contato')}>Contato</Button>
+          <Button color="inherit" onClick={() => navigate('/ContatoForm')}>Contato</Button>
         </Box>
       </Toolbar>
     </AppBar>

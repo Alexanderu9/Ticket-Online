@@ -13,7 +13,7 @@ const NavBarMain = () => {
   const menuItems = [
     { text: 'Início', path: '/home' },
     { text: 'Filmes', path: '/filmes' },
-    { text: 'Contato', path: '/contato' }
+    { text: 'Contato', path: '/ContatoForm' }
   ];
 
   return (
