@@ -7,7 +7,7 @@ import FilmeGrid from './components/FilmeGrid';
 import FilmeDetalhes from './components/FilmeDetalhes';
 import ContatoForm from './pages/ContatoForm';
 import Footer from './components/Footer';
-import NavBar from './components/Navbar';
+import NavBar from './components/NavBar';
 
 
 

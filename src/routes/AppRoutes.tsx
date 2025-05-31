@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Filmes from '../pages/Filmes';
-import Contato from '../pages/Contato';
+import Contato from '../pages/ContatoForm';
 
 export default function AppRoutes() {
   return (
