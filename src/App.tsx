@@ -26,7 +26,7 @@ function App() {
     <Route path="/filmes/:id" element={<FilmeDetalhes />} />
     <Route path="/filmes" element={<Filmes />} />
     <Route path="/filmes/:id" element={<DetalhesFilme />} />
-    <Route path="/contato" element={<ContatoForm />} />
+    <Route path="/ContatoForm" element={<ContatoForm />} />
     </Routes>
     <NavBar/>
     <Footer/>
